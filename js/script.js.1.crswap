@@ -1,0 +1,26 @@
+const donde = document.querySelector('#contendor');
+
+function iniciarJuego(){
+
+    const html = `<figure id="image">
+    <img src="./image/hpensando.png" alt="homero pensando">
+    </figure>
+    <button> ELIGE </button>
+    <div>
+    <picture>
+        <img src="./image/piedra.png" alt="piedra" id="piedra"/>
+        <img src="./image/papel.png" alt="papel" id="papel" />
+        <img src="./image/tijeras.png" alt="tijeras" id="tijeras" />
+    </picture> 
+    </div>`;
+
+  donde.innerHTML = html;
+
+}
+
+function jugar(){
+    const maquina = Math.ceil(Math.random() *3);
+    return maquina;
+}
+
+function jugar1()

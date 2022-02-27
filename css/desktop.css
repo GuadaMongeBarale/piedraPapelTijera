@@ -1,0 +1,22 @@
+figure{
+    height: 45rem;
+}
+button {
+    width: 70%;
+    font-size: 4.5rem;
+}
+p{
+    font-size: 3rem;
+}
+picture{
+    height: 15rem;
+}
+.result{
+    font-size: 4rem;
+}
+.ppt{
+    top:0;
+}
+.title{
+    font-size: 3rem;
+}
