@@ -1,6 +1,6 @@
 # Piedra, Papel o Tijera contra Homero
 
-Este proyecto tiene como fin practicar algunas cuetsiones básicas de HTML, CSS, JavaScript, manejo del DOM y Mobile First
+Este proyecto tiene como fin practicar algunas cuestiones básicas de HTML, CSS, JavaScript, manejo del DOM y Mobile First
 
 ![Homero Piedra Papel o Tijeras](/homer.png)
 
