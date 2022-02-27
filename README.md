@@ -2,9 +2,13 @@
 
 Este proyecto tiene como fin practicar algunas cuetsiones básicas de HTML, CSS, JavaScript, manejo del DOM y Mobile First
 
+![Homero Piedra Papel o Tijeras](/homer.png)
+
 
 **************************************************************************************************************************
+# Para Jugar dale [CLICK](https://guadamongebarale.github.io/piedraPapelTijera/)
 
+**************************************************************************************************************************
 
 ## Manejo de imágenes para carga rápida y posicionamiento SEO
 
