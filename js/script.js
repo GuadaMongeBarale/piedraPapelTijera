@@ -6,15 +6,10 @@ function startGame(){
     <img src="./image/hpensando.png" alt="homero pensando">
     </figure>
     <button class="title"> ELIGE </button>
-    <picture>
-        <img src="./image/piedra.png" alt="piedra"/>
-        <img src="./image/papel.png" alt="papel"/>
-        <img src="./image/tijeras.png" alt="tijeras"/>
-    </picture> 
     <div>
-        <button class="ppt" type="submit" onclick="play1()" ></button>
-        <button class="ppt" type="submit" onclick="play2()" ></button>
-        <button class="ppt" type="submit" onclick="play3()" ></button>
+        <button class="ppt" type="submit" onclick="play1()" ><img src="./image/piedra.png" alt="piedra"/></button>
+        <button class="ppt" type="submit" onclick="play2()" ><img src="./image/papel.png" alt="papel"/></button>
+        <button class="ppt" type="submit" onclick="play3()" ><img src="./image/tijeras.png" alt="tijeras"/></button>
     </div>
     `;
 
@@ -33,7 +28,7 @@ function play1(){
         <article>
             <p class="result">Ambos eligieron Piedra </p>
         </article>
-        <button  type="submit" onclick="startGame()">JUGAR+</button>`;
+        <button class="click" type="submit" onclick="startGame()">JUGAR+</button>`;
 
         where.innerHTML = html;
     }else if (homer === 2){
@@ -45,7 +40,7 @@ function play1(){
         <article>
             <p class="result">Te envolvió el Papel de Homero</p>
         </article>
-        <button  type="submit" onclick="startGame()">JUGAR+</button>`;
+        <button class="click" type="submit" onclick="startGame()">JUGAR+</button>`;
 
         where.innerHTML = html;
     } else {
@@ -57,7 +52,7 @@ function play1(){
         <article>
             <p class="result">Rompiste las Tijeras de Homero</p>
         </article>
-        <button  type="submit" onclick="startGame()">JUGAR+</button>`;
+        <button class="click" type="submit" onclick="startGame()">JUGAR+</button>`;
 
         where.innerHTML = html;
     }
@@ -74,7 +69,7 @@ function play2(){
         <article>
             <p class="result">Ambos eligieron Papel </p>
         </article>
-        <button  type="submit" onclick="startGame()">JUGAR+</button>`;
+        <button class="click" type="submit" onclick="startGame()">JUGAR+</button>`;
 
         where.innerHTML = html;
     }else if (homer === 3){
@@ -86,7 +81,7 @@ function play2(){
         <article>
             <p class="result">Te cortaron las Tijeras de Homero</p>
         </article>
-        <button  type="submit" onclick="startGame()">JUGAR+</button>`;
+        <button class="click" type="submit" onclick="startGame()">JUGAR+</button>`;
 
         where.innerHTML = html;
     } else {
@@ -98,7 +93,7 @@ function play2(){
         <article>
             <p class="result">Envolviste la Piedra de Homero</p>
         </article>
-        <button  type="submit" onclick="startGame()">JUGAR+</button>`;
+        <button class="click" type="submit" onclick="startGame()">JUGAR+</button>`;
 
         where.innerHTML = html;
     }
@@ -115,7 +110,7 @@ function play3(){
         <article>
             <p class="result">Ambos eligieron Tijeras </p>
         </article>
-        <button  type="submit" onclick="startGame()">JUGAR+</button>`;
+        <button class="click" type="submit" onclick="startGame()">JUGAR+</button>`;
 
         where.innerHTML = html;
     }else if (homer === 1){
@@ -127,7 +122,7 @@ function play3(){
         <article>
             <p class="result">La Piedra de Homero rompió tus Tijeras</p>
         </article>
-        <button  type="submit" onclick="startGame()">JUGAR+</button>`;
+        <button class="click" type="submit" onclick="startGame()">JUGAR+</button>`;
 
         where.innerHTML = html;
     } else {
@@ -139,7 +134,7 @@ function play3(){
         <article>
             <p class="result">Cortaste el Papel de Homero</p>
         </article>
-        <button  type="submit" onclick="startGame()">JUGAR+</button>`;
+        <button class="click" type="submit" onclick="startGame()">JUGAR+</button>`;
 
         where.innerHTML = html;
     }

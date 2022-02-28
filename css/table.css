@@ -1,9 +1,9 @@
 
 figure{
-    height: 35rem;
+    height: 30rem;
 }
 
-button {
+.click {
     width: 70%;
     font-size: 3rem;
 }
@@ -12,17 +12,13 @@ p{
     font-size: 2.4rem;
 }
 
-picture{
-    width: 90%;
-    height: 10rem;
-}
-
 .result{
     font-size: 3rem;
 }
-.ppt{
-    top:-1.5rem;
-}
+
 .title{
     font-size: 2.3rem;
 }
+.ppt img{
+    width: 11rem;
+    }
