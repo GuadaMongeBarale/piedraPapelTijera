@@ -5,6 +5,12 @@ figure{
     width: 70%;
     font-size: 4.5rem;
 }
+
+.click:hover{
+    background-color: blue;
+}
+
+
 p{
     font-size: 3rem;
 }
@@ -17,15 +23,14 @@ p{
     font-size: 3rem;
 }
 
-.click:hover{
-    background-color: blue;
-}
-.ppt img{
-    width: 20rem;
-    }
 .ppt:hover{
     border: 0.3rem red solid;
 }
+
+.ppt img{
+    width: 20rem;
+    }
+
 .ppt img:hover {
     width: 25rem;
     height: 9rem;

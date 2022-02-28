@@ -54,6 +54,7 @@ figure img{
     letter-spacing: 0.3rem; 
     cursor: pointer;
     }
+
 article{
     width: 80%;
     } 
@@ -75,8 +76,15 @@ div{
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
+    }
+
+.ppt{
+    cursor: pointer;
+    border: 0.3rem #FF8000 solid;
+    border-radius: 1rem;
     overflow: hidden;
     }
+
 .ppt img{
     width: 7rem;
     min-width: 80px;
@@ -85,18 +93,12 @@ div{
     object-fit: contain;
     object-position: center center;
     }
+
 .result{
         text-align: center;
         font-size: 2.5rem;
         font-weight: bold;
         line-height: 1.5; /* interlineado */
-    }
-
-.ppt{
-    cursor: pointer;
-    border: 0.3rem #FF8000 solid;
-    border-radius: 1rem;
-    overflow: hidden;
     }
 
 .title{
