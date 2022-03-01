@@ -4,11 +4,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[hash].bundle.js",
+    filename: "bundle.js",
   },
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -30,7 +31,15 @@ module.exports = {
           filename: "assets/images/[hash][ext][query]",
         },
       },
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
     ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
     new HtmlWebpackPlugin({
