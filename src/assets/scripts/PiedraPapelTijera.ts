@@ -1,12 +1,18 @@
 interface Configuration {
   intents?: number;
-  finished: (resutl: any) => any;
+  finished: (resutl: FinalResult) => any;
+  result: (result: AssertionResult) => any;
 }
 
-interface Result {
+interface FinalResult {
   loss: number;
   success: number;
   tie: number;
+}
+
+interface AssertionResult {
+  homero: number;
+  validate: number;
 }
 
 export default class PiedraPapelTijera {
@@ -14,8 +20,10 @@ export default class PiedraPapelTijera {
   private _success: number = 0;
   private _tie: number = 0;
   private _counter: number = 0;
+  private _ended: boolean = false;
   private _intents: number;
-  private _finished: (result: Result) => void;
+  private _finished: (result: FinalResult) => void;
+  private _result: (result: AssertionResult) => void;
 
   /**
    * Creates an instance of PiedraPapelTijera.
@@ -24,6 +32,31 @@ export default class PiedraPapelTijera {
   constructor(config: Configuration) {
     this._intents = config["intents"] ?? 3;
     this._finished = config.finished;
+    this._result = config.result;
+  }
+  /**
+   * Obtener el codigo de piedra
+   *
+   * @return {*}  {number}
+   */
+  public getPiedra(): number {
+    return 0;
+  }
+  /**
+   * Obtener el codigo de tijera
+   *
+   * @return {*}  {number}
+   */
+  public getPapel(): number {
+    return 1;
+  }
+  /**
+   * Obtener el codigo de tijera
+   *
+   * @return {*}  {number}
+   */
+  public getTijera(): number {
+    return 2;
   }
   /**
    * Adivinar el numero
@@ -31,13 +64,23 @@ export default class PiedraPapelTijera {
    * @param {number} assert
    */
   public play(assert: number): void {
-    if (this._counter <= this._intents) {
+    // Añadir en uno el contador de intentos
+    this._counter += 1;
+
+    if (!this._ended) {
       // Obtener lo que homero a seleccionado
       const homero = this.random();
       // Validar la asercion con el de homero
-      this.validate(assert, homero);
-      // Añadir en uno el contador de intentos
-      this._counter += 1;
+      const validate = this.validate(assert, homero);
+      // Retornar el resultado
+      this._result({
+        homero,
+        validate,
+      });
+      // Finalizar si a alcanzado el numero máximo de intentos
+      if (this._counter == this._intents) {
+        this.stop();
+      }
     } else {
       this.stop();
     }
@@ -51,6 +94,7 @@ export default class PiedraPapelTijera {
     this._success = 0;
     this._tie = 0;
     this._counter = 0;
+    this._ended = false;
   }
   /**
    * Parar el juego
@@ -58,6 +102,7 @@ export default class PiedraPapelTijera {
    * @private
    */
   private stop(): void {
+    this._ended = true;
     // Accionar el callback de finalizacion del juego
     this._finished({
       loss: this._loss,
@@ -81,7 +126,7 @@ export default class PiedraPapelTijera {
    * @param {number} assert
    * @param {number} homero
    */
-  private validate(assert: number, homero: number): void {
+  private validate(assert: number, homero: number): number {
     // piedra:0 > tijera
     // papel:1 > piedra
     // tijera:2 > papel
@@ -99,12 +144,15 @@ export default class PiedraPapelTijera {
     if (validate[assert][0] === homero) {
       // Empate
       this._loss += 1;
+      return 2;
     } else if (validate[assert][1] === homero) {
       // Gana
       this._success += 1;
+      return 1;
     } else {
       // Pierde
       this._loss += 1;
+      return 0;
     }
   }
 }
