@@ -59,6 +59,21 @@ export default class PiedraPapelTijera {
     return 2;
   }
   /**
+   * Obtener la aserción de Homero
+   *
+   * @param {number} code
+   * @return {*}
+   */
+  public getHomero(code: number) {
+    if (code == 0) {
+      return "piedra";
+    } else if (code == 1) {
+      return "papel";
+    } else if (code == 2) {
+      return "tijera";
+    }
+  }
+  /**
    * Adivinar el numero
    *
    * @param {number} assert

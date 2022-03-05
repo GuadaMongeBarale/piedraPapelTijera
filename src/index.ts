@@ -9,25 +9,36 @@ const resultConntainer = <HTMLElement>document.getElementById("result");
 const homero = <HTMLImageElement>document.getElementById("homero");
 const piedra = <HTMLButtonElement>document.getElementById("piedra");
 const papel = <HTMLButtonElement>document.getElementById("papel");
+const resultSpan = <HTMLElement>document.getElementById("resultSpan");
 const tijera = <HTMLButtonElement>document.getElementById("tijera");
-const success = <HTMLElement>document.getElementById("success");
-const loss = <HTMLElement>document.getElementById("loss");
-const tie = <HTMLElement>document.getElementById("tie");
+const successSpan = <HTMLElement>document.getElementById("success");
+const lossSpan = <HTMLElement>document.getElementById("loss");
+const tieSpan = <HTMLElement>document.getElementById("tie");
+let success = 0;
+let loss = 0;
+let tie = 0;
 
 const game = new PiedraPapelTijera({
   finished: (result) => {
-    success.innerHTML = result.success.toString();
-    loss.innerHTML = result.loss.toString();
-    tie.innerHTML = result.tie.toString();
-    resultConntainer.style.display = "block";
+    // Aquí puedes poner tu codigo cuando el juego termine
   },
   result: (result) => {
+    resultSpan.innerHTML = "Homero escogió " + game.getHomero(result.homero);
     if (result.validate == 2) {
+      // Empate
+      tie += 1;
       homero.src = "./assets/img/homero-empate.png";
+      tieSpan.innerHTML = tie.toString();
     } else if (result.validate == 1) {
+      // Ganas
+      success += 1;
       homero.src = "./assets/img/homero-perdiste.png";
+      successSpan.innerHTML = success.toString();
     } else if (result.validate == 0) {
+      // Pierdes
+      loss += 1;
       homero.src = "./assets/img/homero-ganaste.png";
+      lossSpan.innerHTML = loss.toString();
     } else {
       homero.src = "./assets/img/homero-pensando.png";
     }
@@ -39,6 +50,7 @@ const game = new PiedraPapelTijera({
 go.addEventListener("click", () => {
   welcomeContainer.style.display = "none";
   gameConntainer.style.display = "block";
+  resultConntainer.style.display = "block";
 });
 
 piedra.addEventListener("click", () => {
