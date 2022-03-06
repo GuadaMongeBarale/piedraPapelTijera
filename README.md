@@ -6,7 +6,7 @@ Este proyecto tiene como fin practicar algunas cuestiones básicas de HTML, CSS,
 
 
 **************************************************************************************************************************
-# Para Jugar dale [CLICK](https://guadamongebarale.github.io/piedraPapelTijera/)
+# Para Jugar dale [CLICK](https://dmpb.github.io/piedraPapelTijera/)
 
 **************************************************************************************************************************
 
