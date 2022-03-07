@@ -2,13 +2,15 @@
 
 Este proyecto tiene como fin practicar algunas cuestiones básicas de HTML, CSS, JavaScript, manejo del DOM y Mobile First
 
-![Homero Piedra Papel o Tijeras](https://dmpb.github.io/piedraPapelTijera/assets/img/game-screenshot.png)
+![Homero Piedra Papel o Tijeras](/homer.png)
 
----
-### Para Jugar dale [CLICK](https://dmpb.github.io/piedraPapelTijera/)
----
 
-## 🎰 Manejo de imágenes para carga rápida y posicionamiento SEO
+**************************************************************************************************************************
+# Para Jugar dale [CLICK](https://guadamongebarale.github.io/piedraPapelTijera/)
+
+**************************************************************************************************************************
+
+## Manejo de imágenes para carga rápida y posicionamiento SEO
 
 Photoshop: medida justa y guardado "como web".
 
@@ -17,29 +19,17 @@ Photoshop: medida justa y guardado "como web".
 Etiqueta figure y picture: buenas prácticas de HTML Semántico
 
 
-## 🏗 Manipulación del DOM
+## Manipulación del DOM
 
-Al hacer click en algún botón `innerHTML` crea la vista correspondiente.
+Al hacer click en algún botón innerHTML crea la vista correspondiente.
 
-## 👨🏻‍💻 JavaScript
+## JavaScript
 
-Condicionales: con estricta igualdad `(===)` por buena práctica.
+Condicionales: con estricta igualdad (===) por buena práctica.
 
 Funciones declarativas.
 
-Math `random` y `floor` para generar la jugada de Homero. 
+Math random y ceil para generar la jugada de Homero. 
 
-## ⚓️ Deploy
-```shell
-# Instalar dependencias
-npm run install
 
-# Compilar en modo desarrollo
-npm run dev
 
-# Compilar en modo producción
-npm run production
-
-# Abrir servidor
-npm run serve
-```
